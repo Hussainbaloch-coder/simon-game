@@ -32,7 +32,7 @@ $(document).keypress(function(){
 }
 });
 function makeSounds(color){
-  var audio = new Audio("sounds/"+color+".mp3");
+  var audio = new Audio(color+".mp3");
   audio.play();
 }
 function animatePress(currentColour){
@@ -52,7 +52,7 @@ if(userClickedPattern[currentlevel]==gamePattern[currentlevel])
   }
 }
 else{
-var audio = new Audio("sounds/wrong.mp3");
+var audio = new Audio("wrong.mp3");
 audio.play();
 $("body").addClass("game-over");
 setTimeout(function(){$("body").removeClass("game-over")},200);
